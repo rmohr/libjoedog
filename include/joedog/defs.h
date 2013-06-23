@@ -1,6 +1,6 @@
 #ifndef JOEDOG_DEFS_H
 #define JOEDOG_DEFS_H
-#define private static 
+#define private static
 #define public 
 
 #include <ctype.h>
@@ -10,9 +10,10 @@
 #define  ISCOMMENT(x)   (x == '#')
 #define  ISSEPARATOR(x) (('='==(x))||(':'==(x)))
 #define  ISSPACE(x)     isspace((unsigned char)(x))
-#define  ISOPERAND(x)   ('<'==(x)||'>'==(x)||'='==(x))
+#define  ISOPERAND(x) ('<'==(x)||'>'==(x)||'='==(x))
 #define  ISDIGIT(x)     isdigit ((unsigned char)(x)) 
-#define  ISQUOTE(x)     (x == '"' || x == '\'') 
+#define  ISNUMBER(v)  (((v) > (char)0x2f) && ((v) < (char)0x3a))
+#define  ISQUOTE(x)   (x == '"' || x == '\'') 
 #if STDC_HEADERS
 # define TOLOWER(Ch) tolower (Ch)
 # define TOUPPER(Ch) toupper (Ch)

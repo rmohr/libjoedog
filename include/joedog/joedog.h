@@ -26,6 +26,15 @@
 #include <stdarg.h>
 #include <joedog/boolean.h>
 
+#define BLACK      0
+#define RED        1
+#define GREEN      2
+#define YELLOW     3
+#define BLUE       4
+#define MAGENTA    5
+#define CYAN       6
+#define WHITE      7
+
 /**
  * Error notification
  */
@@ -42,11 +51,16 @@ void CLOSELOG(void);
 void SYSLOG(LEVEL L, const char *fmt, ...);
 void NOTIFY(LEVEL L, const char *fmt, ...);
 void VERBOSE(BOOLEAN verbose, const char *fmt, ...);
+void DISPLAY(int color, const char *fmt, ...);
 
+/**
+ * Memory management
+ */
 void * xrealloc(void *, size_t);
 void * xmalloc (size_t);
 void * xcalloc (size_t, size_t); 
 char * xstrdup(const char *str);
+char * xstrcat(const char *arg1, ...);
 void xfree(void *ptr); 
 
 /**
