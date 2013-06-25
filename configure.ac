@@ -21,11 +21,12 @@
 #
 
 
-AC_PREREQ([2.69])
-AC_INIT([libjoedog], [0.1.0], [jeff@joedog.org])
+AC_PREREQ([2.59])
+AC_INIT([libjoedog], [0.1.1], [jeff@joedog.org])
 AC_CONFIG_SRCDIR([config.h.in])
 AC_CONFIG_HEADERS([config.h])
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([foreign])
+AC_CONFIG_MACRO_DIR([m4])
 
 # Checks for programs.
 AC_PROG_CC
@@ -33,7 +34,7 @@ AC_PROG_CC
 # Checks for libraries.
 
 # Checks for header files.
-AC_CHECK_HEADERS([fcntl.h memory.h stdlib.h string.h strings.h sys/time.h syslog.h unistd.h])
+AC_CHECK_HEADERS([fcntl.h memory.h stdlib.h string.h strings.h sys/time.h sys/times.h syslog.h unistd.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_TYPE_SIZE_T
@@ -41,9 +42,10 @@ AC_TYPE_SIZE_T
 # Checks for library functions.
 AC_FUNC_MALLOC
 AC_FUNC_REALLOC
-AC_CHECK_FUNCS([memchr memmove memset strchr strdup strerror strrchr])
+AC_CHECK_FUNCS([memchr memmove memset strchr strdup strerror strrchr snprintf vsnprintf])
 
-LT_INIT([dlopen])
+AC_LIBTOOL_DLOPEN
+AC_PROG_LIBTOOL
 
 AC_CONFIG_FILES([src/Makefile
                  include/Makefile

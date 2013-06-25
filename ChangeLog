@@ -1,3 +1,13 @@
+*libjoedog-0.1.1 (23 Jun 2013)
+
+  26 Jun 2013; Björn Esser <bjoern.esser@gmail.com>:
+  new Version 0.1.1
+  support autoconf 2.59 for el5
+  change automake rules to less strict (foreign instead gnu)
+  add check for snprintf, vsnprintf and sys/times.h fixing build-errors on el5
+  enhanced and reordered gitignore 
+  nuked obsolete files
+
 *libjoedog-0.1.0 (23 Jun 2013)
 
   22 Jun 2013; Roman Mohr <roman@fenkhuber.at>:
@@ -5,4 +15,3 @@
 
   23 Jun 2013; Roman Mohr <roman@fenkhuber.at>:
   compatibility changes for siege
-
