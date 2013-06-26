@@ -20,10 +20,9 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
-
 lib_LTLIBRARIES   = libjoedog.la 
 
-libjoedog_la_LDFLAGS = -version-info 1:0:1
+libjoedog_la_LDFLAGS = -version-info 1:1:1
 
 libjoedog_la_CFLAGS = -I$(top_srcdir)/include
 
