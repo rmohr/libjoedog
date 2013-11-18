@@ -22,7 +22,7 @@
 
 
 AC_PREREQ([2.59])
-AC_INIT([libjoedog], [0.1.1], [jeff@joedog.org])
+AC_INIT([libjoedog], [0.1.2], [jeff@joedog.org])
 AC_CONFIG_SRCDIR([config.h.in])
 AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE([foreign])

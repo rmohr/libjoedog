@@ -22,7 +22,7 @@
 
 lib_LTLIBRARIES   = libjoedog.la 
 
-libjoedog_la_LDFLAGS = -version-info 1:1:1
+libjoedog_la_LDFLAGS = -version-info 1:2:1
 
 libjoedog_la_CFLAGS = -I$(top_srcdir)/include
 
