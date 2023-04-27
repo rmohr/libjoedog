@@ -45,16 +45,13 @@ char *strchr (), *strrchr ();
 # include <sys/times.h>
 #endif /* HAVE_SYS_TIMES_H */
 
-#if TIME_WITH_SYS_TIME
+#if HAVE_SYS_TIME_H
 # include <sys/time.h>
+#endif
+
+#if HAVE_TIME_H
 # include <time.h>
-#else
-# if HAVE_SYS_TIME_H
-#  include <sys/time.h>
-# else
-#  include <time.h>
-# endif /* HAVE_SYS_TIME_H    */
-#endif  /* TIME_WITH_SYS_TIME */ 
+#endif
 
 #include <stdio.h>
 #include <stdlib.h>
